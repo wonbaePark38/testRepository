@@ -21,6 +21,7 @@ public class KeymakeApplication {
 		SpringApplication.run(KeymakeApplication.class, args);
 		System.out.println("코드수정!!!!!!");
 		System.out.println("코드수정!!!!!!");
+		System.out.println("코드수정!!!!!!");
 		/*new SecureRandom().nextBytes(SECRET_KEY);
 		String message = "wonbae";
 		String encryptedMessage = encrypt(message);
