@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.co.neighbor21.keymake.service.CreateApiKeyService;
 import kr.co.neighbor21.keymake.util.AesDecrypt;
 import kr.co.neighbor21.keymake.util.AesEncrypt;
+import kr.co.neighbor21.keymake.util.HmacSha256;
 import kr.co.neighbor21.keymake.util.SHA1;
 import kr.co.neighbor21.keymake.util.UtilClass;
 import kr.co.neighbor21.keymake.vo.UserInfo;
@@ -70,10 +71,12 @@ public class LoginController {
 			e.printStackTrace();
 		}*/
 		
-		/*sha-1*/
+		/*sha-1
 		sha1 = SHA1.encrypt(originalString);
 		System.out.println("sha1 length : " + sha1.length() + " sha1 : " + sha1);
 		vo.setHashKey(hash);
+		*/
+		
 		/*String apiHashKey = service.makeHashKey(vo.getUserId());
 		String apiAesKey = service.makeAesKey(vo.getUserId(), "LoginService");
 		
@@ -82,6 +85,10 @@ public class LoginController {
 		vo.setHashKey(apiHashKey);
 		vo.setAesKey(apiAesKey);*/
 		
+		/*hs256*/
+		String hmac = HmacSha256.encrypt(secretKey, originalString);
+		System.out.println("hmac length : " + hmac.length() + " hmac : " + hmac);
+		vo.setHashKey(hmac);
 		return vo;
 	}
 }
