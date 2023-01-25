@@ -1,16 +1,11 @@
 package kr.co.neighbor21.keymake;
 
 import java.security.InvalidKeyException;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.util.Base64;
 
 import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,10 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KeymakeApplication {
 	public static void main(String[] args) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		SpringApplication.run(KeymakeApplication.class, args);
-		System.out.println("코드수정!!!!!!");
-		System.out.println("코드수정!!!!!!");
-		System.out.println("코드수정!!!!!!");
-		System.out.println("코드수정 by 메롱!!!!!!");
 		/*new SecureRandom().nextBytes(SECRET_KEY);
 		String message = "wonbae";
 		String encryptedMessage = encrypt(message);
