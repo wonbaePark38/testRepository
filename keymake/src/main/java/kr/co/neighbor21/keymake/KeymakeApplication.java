@@ -22,6 +22,7 @@ public class KeymakeApplication {
 		System.out.println("코드수정!!!!!!");
 		System.out.println("코드수정!!!!!!");
 		System.out.println("코드수정!!!!!!");
+		System.out.println("코드수정 by 메롱!!!!!!");
 		/*new SecureRandom().nextBytes(SECRET_KEY);
 		String message = "wonbae";
 		String encryptedMessage = encrypt(message);
